@@ -3,353 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inmotext - Fichas de Inmuebles con IA en 5 Idiomas</title>
-    <meta name="description" content="Inmotext: IA que genera fichas de inmuebles profesionales en 5 idiomas en 30 segundos para agencias inmobiliarias en España.">
-    <meta property="og:title" content="Inmotext - Fichas de Inmuebles con IA en 5 Idiomas">
-    <meta property="og:description" content="Inmotext: IA que genera fichas de inmuebles profesionales en 5 idiomas en 30 segundos para agencias inmobiliarias en España.">
-    <meta property="og:type" content="website">
+    <title>Inmotext - Proximamente</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Inmotext",
-      "applicationCategory": "RealEstateApp",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "149-299",
-        "priceCurrency": "EUR"
-      },
-      "description": "Inmotext es una plataforma de IA que genera automáticamente descripciones profesionales de propiedades en 5 idiomas para agentes inmobiliarios en España.",
-      "url": "https://inmotext.github.io"
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --color-navy: #0B1628;
-            --color-white: #FAFAF8;
-            --color-coral: #FF5733;
-            --font-display: 'Instrument Serif', serif;
-            --font-body: 'Inter', sans-serif;
-            --max-width: 1200px;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-        }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); color: var(--color-white); background-color: var(--color-navy); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        a { color: var(--color-coral); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); line-height: 1.2; margin-bottom: var(--spacing-sm); }
-        p { margin-bottom: 1rem; }
-        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--spacing-md); }
-        .button { display: inline-block; background-color: var(--color-coral); color: var(--color-navy); padding: 0.8rem 1.8rem; border-radius: 4px; font-weight: 600; font-size: 1rem; transition: background-color 0.3s ease, transform 0.2s ease; cursor: pointer; border: none; text-align: center; }
-        .button:hover { background-color: #FF784F; transform: translateY(-2px); text-decoration: none; }
-        .button.button-outline { background-color: transparent; color: var(--color-coral); border: 1px solid var(--color-coral); }
-        .button.button-outline:hover { background-color: var(--color-coral); color: var(--color-navy); }
-        section { padding: var(--spacing-lg) 0; position: relative; }
-        .section-heading { text-align: center; font-size: 2.5rem; margin-bottom: var(--spacing-lg); color: var(--color-white); }
-        .fade-in-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; will-change: opacity, transform; }
-        .fade-in-up.is-visible { opacity: 1; transform: translateY(0); }
-        .nav { background-color: var(--color-navy); padding: var(--spacing-sm) var(--spacing-md); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .nav .container { display: flex; justify-content: space-between; align-items: center; }
-        .nav .logo { font-family: var(--font-display); font-size: 1.8rem; color: var(--color-white); font-weight: 700; }
-        .nav .logo:hover { text-decoration: none; }
-        .hero { text-align: center; padding: var(--spacing-lg) var(--spacing-md) calc(var(--spacing-lg) * 0.75); min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; max-width: 900px; color: var(--color-white); }
-        .hero p.subline { font-size: 1.3rem; margin-bottom: var(--spacing-md); max-width: 700px; opacity: 0.9; }
-        .hero .trust-line { margin-top: var(--spacing-md); font-size: 0.9rem; opacity: 0.7; }
-        @media (min-width: 768px) { .hero h1 { font-size: 4.5rem; } .hero p.subline { font-size: 1.5rem; } }
-        .problem-cards { display: grid; grid-template-columns: 1fr; gap: var(--spacing-md); }
-        .problem-card { background-color: rgba(255,255,255,0.05); border-radius: 8px; padding: var(--spacing-md); text-align: center; transition: transform 0.3s ease; border: 1px solid rgba(255,255,255,0.1); }
-        .problem-card:hover { transform: translateY(-5px); }
-        .problem-card h3 { font-size: 1.6rem; color: var(--color-coral); margin-bottom: 0.8rem; }
-        .problem-card p { font-size: 1rem; opacity: 0.8; margin-bottom: 0; }
-        @media (min-width: 768px) { .problem-cards { grid-template-columns: repeat(3, 1fr); } }
-        .solution-steps { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); margin-top: var(--spacing-lg); }
-        .solution-step { display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .solution-step .step-number { font-family: var(--font-display); font-size: 4rem; color: var(--color-coral); margin-bottom: var(--spacing-sm); opacity: 0.8; }
-        .solution-step h3 { font-size: 2rem; margin-bottom: 0.8rem; color: var(--color-white); }
-        .solution-step p { max-width: 400px; font-size: 1.1rem; opacity: 0.8; margin-bottom: 0; }
-        @media (min-width: 768px) { .solution-steps { grid-template-columns: repeat(3, 1fr); } }
-        .languages { background-color: rgba(255,255,255,0.03); text-align: center; }
-        .language-flags { display: flex; justify-content: center; gap: var(--spacing-md); margin-top: var(--spacing-md); margin-bottom: var(--spacing-lg); flex-wrap: wrap; }
-        .language-flags span { font-size: 3rem; transition: transform 0.3s ease; }
-        .language-flags span:hover { transform: scale(1.1); }
-        .languages h2 { font-size: 2.8rem; margin-bottom: 0; max-width: 800px; margin-left: auto; margin-right: auto; }
-        @media (min-width: 768px) { .languages h2 { font-size: 3.5rem; } .language-flags span { font-size: 4.5rem; } }
-        .testimonials { display: grid; grid-template-columns: 1fr; gap: var(--spacing-md); }
-        .testimonial-card { background-color: rgba(255,255,255,0.05); border-radius: 8px; padding: var(--spacing-md); border: 1px solid rgba(255,255,255,0.1); }
-        .testimonial-card p { font-style: italic; margin-bottom: 1rem; font-size: 1.1rem; opacity: 0.9; line-height: 1.7; }
-        .testimonial-author { font-weight: 600; color: var(--color-coral); margin-bottom: 0.2rem; font-style: normal; }
-        .testimonial-agency { font-size: 0.9rem; opacity: 0.7; font-style: normal; }
-        @media (min-width: 768px) { .testimonials { grid-template-columns: repeat(3, 1fr); } }
-        .pricing-cards { display: grid; grid-template-columns: 1fr; gap: var(--spacing-md); }
-        .pricing-card { background-color: rgba(255,255,255,0.05); border-radius: 8px; padding: var(--spacing-md); text-align: center; border: 2px solid transparent; position: relative; transition: border-color 0.3s ease, transform 0.3s ease; }
-        .pricing-card:hover { transform: translateY(-5px); }
-        .pricing-card.highlight { border-color: var(--color-coral); background-color: rgba(255,87,51,0.1); transform: scale(1.02); }
-        .pricing-card.highlight .popular-badge { background-color: var(--color-coral); color: var(--color-navy); font-weight: 700; font-size: 0.8rem; padding: 0.3rem 0.8rem; border-radius: 20px; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); z-index: 1; }
-        .pricing-card h3 { font-size: 2rem; color: var(--color-coral); margin-bottom: 1rem; }
-        .pricing-card .price { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-white); }
-        .pricing-card .price span { font-size: 1rem; font-weight: 400; opacity: 0.8; }
-        .pricing-card ul { list-style: none; padding: 0; margin-bottom: var(--spacing-md); text-align: left; }
-        .pricing-card ul li { margin-bottom: 0.5rem; position: relative; padding-left: 1.5rem; opacity: 0.9; }
-        .pricing-card ul li::before { content: '✓'; color: var(--color-coral); position: absolute; left: 0; font-weight: 700; }
-        @media (min-width: 768px) { .pricing-cards { grid-template-columns: repeat(3, 1fr); } }
-        .faq-accordion { max-width: 800px; margin: 0 auto; }
-        .faq-item { background-color: rgba(255,255,255,0.05); border-radius: 8px; margin-bottom: 1rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-        .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 1rem var(--spacing-md); cursor: pointer; font-size: 1.1rem; font-weight: 500; color: var(--color-white); transition: background-color 0.3s ease; }
-        .faq-question:hover { background-color: rgba(255,255,255,0.08); }
-        .faq-question .icon { font-size: 1.5rem; line-height: 1; transition: transform 0.3s ease; }
-        .faq-answer { padding: 0 var(--spacing-md); max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; opacity: 0.8; }
-        .faq-answer p { padding-bottom: var(--spacing-md); }
-        .faq-item.active .faq-question .icon { transform: rotate(45deg); }
-        .faq-item.active .faq-answer { max-height: 200px; padding-top: 0.5rem; }
-        .final-cta { background-color: var(--color-coral); padding: calc(var(--spacing-lg) * 1.5) 0; text-align: center; color: var(--color-navy); }
-        .final-cta h2 { font-size: 3rem; margin-bottom: var(--spacing-md); color: var(--color-navy); }
-        .final-cta .button { background-color: var(--color-navy); color: var(--color-white); padding: 1rem 3rem; font-size: 1.2rem; }
-        .final-cta .button:hover { background-color: rgba(11,22,40,0.85); transform: translateY(-3px); }
-        .footer { background-color: var(--color-navy); padding: var(--spacing-md) 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
-        .footer .logo { font-family: var(--font-display); font-size: 1.6rem; color: var(--color-white); margin-bottom: 0.5rem; display: block; }
-        .footer .logo:hover { text-decoration: none; }
-        .footer p { margin-bottom: 1rem; opacity: 0.8; }
-        .footer .footer-links { margin-top: var(--spacing-sm); margin-bottom: var(--spacing-sm); }
-        .footer .footer-links a { color: var(--color-white); margin: 0 0.8rem; transition: color 0.3s ease; }
-        .footer .footer-links a:hover { color: var(--color-coral); text-decoration: none; }
-        .footer .copyright { margin-top: 1rem; font-size: 0.8rem; opacity: 0.6; }
-        @media (max-width: 767px) {
-            .section-heading { font-size: 2rem; margin-bottom: var(--spacing-md); }
-            .hero h1 { font-size: 2.5rem; }
-            .hero p.subline { font-size: 1.1rem; }
-            .solution-step h3 { font-size: 1.5rem; }
-            .languages h2 { font-size: 2.2rem; }
-            .final-cta h2 { font-size: 2.2rem; }
-            .pricing-card.highlight { transform: none; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0B1628;
+            color: #FAFAF8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
         }
-        ::selection { background: var(--color-coral); color: var(--color-navy); }
+        .logo {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+            opacity: 0.7;
+            max-width: 400px;
+        }
+        .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #FF5733;
+            border-radius: 50%;
+            margin: 2rem auto 0;
+        }
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <div class="container">
-            <a href="#" class="logo">Inmotext</a>
-            <a href="#pricing" class="button button-outline">Empieza gratis</a>
-        </div>
-    </nav>
-
-    <section class="hero" id="home">
-        <div class="container">
-            <h1 class="fade-in-up">Fichas de inmuebles en 5 idiomas. En 30 segundos.</h1>
-            <p class="subline fade-in-up" style="transition-delay:0.2s">IA que escribe por ti — para que tú puedas vender.</p>
-            <a href="#pricing" class="button fade-in-up" style="transition-delay:0.4s">Prueba gratis 14 días</a>
-            <p class="trust-line fade-in-up" style="transition-delay:0.6s">Más de 200 agencias en España ya lo usan</p>
-        </div>
-    </section>
-
-    <section class="problem" id="problem">
-        <div class="container">
-            <h2 class="section-heading fade-in-up">El problema que conoces bien</h2>
-            <div class="problem-cards">
-                <div class="problem-card fade-in-up">
-                    <h3>Escribir fichas tarda horas</h3>
-                    <p>La creación de descripciones atractivas y su traducción manual a varios idiomas consume tiempo valioso que podrías dedicar a vender.</p>
-                </div>
-                <div class="problem-card fade-in-up" style="transition-delay:0.15s">
-                    <h3>Los compradores internacionales se pierden</h3>
-                    <p>Sin fichas multilingues, pierdes acceso a un mercado enorme de compradores extranjeros que no leen espanol.</p>
-                </div>
-                <div class="problem-card fade-in-up" style="transition-delay:0.3s">
-                    <h3>Las agencias grandes te superan</h3>
-                    <p>Las grandes agencias tienen equipos de copywriters y traductores. Inmotext nivela el campo de juego.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="solution" id="solution">
-        <div class="container">
-            <h2 class="section-heading fade-in-up">Como funciona Inmotext</h2>
-            <div class="solution-steps">
-                <div class="solution-step fade-in-up">
-                    <span class="step-number">1</span>
-                    <h3>Introduce los datos del inmueble</h3>
-                    <p>Rellena un formulario sencillo con los detalles clave: tipo de propiedad, ubicacion, caracteristicas, precio.</p>
-                </div>
-                <div class="solution-step fade-in-up" style="transition-delay:0.15s">
-                    <span class="step-number">2</span>
-                    <h3>La IA genera las descripciones</h3>
-                    <p>En tan solo 30 segundos, Inmotext crea descripciones profesionales en los 5 idiomas, optimizadas para Idealista, web y redes sociales.</p>
-                </div>
-                <div class="solution-step fade-in-up" style="transition-delay:0.3s">
-                    <span class="step-number">3</span>
-                    <h3>Copia, pega y cierra la venta</h3>
-                    <p>Publica tus nuevas fichas inmediatamente y atrae a mas compradores, tanto locales como internacionales.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="languages" id="languages">
-        <div class="container fade-in-up">
-            <div class="language-flags">
-                <span>🇪🇸</span>
-                <span>🇬🇧</span>
-                <span>🇩🇪</span>
-                <span>🇫🇷</span>
-                <span>🇳🇱</span>
-            </div>
-            <h2>Una ficha. Cinco idiomas. Cero traductores.</h2>
-        </div>
-    </section>
-
-    <section class="social-proof" id="testimonials">
-        <div class="container">
-            <h2 class="section-heading fade-in-up">Lo que dicen nuestros clientes</h2>
-            <div class="testimonials">
-                <div class="testimonial-card fade-in-up">
-                    <p>"Inmotext ha transformado la forma en que trabajamos. Ahorramos horas cada semana y hemos visto un aumento enorme en el interes de compradores extranjeros."</p>
-                    <p class="testimonial-author">Maria Rodriguez</p>
-                    <p class="testimonial-agency">Gerente, Inmobiliaria Maritima, Valencia</p>
-                </div>
-                <div class="testimonial-card fade-in-up" style="transition-delay:0.15s">
-                    <p>"Antes, la traduccion era un dolor de cabeza. Ahora tengo fichas perfectas en cinco idiomas al instante. Mis anuncios en Idealista nunca habian lucido tan profesionales."</p>
-                    <p class="testimonial-author">Javier Perez</p>
-                    <p class="testimonial-agency">Agente independiente, Costa del Sol</p>
-                </div>
-                <div class="testimonial-card fade-in-up" style="transition-delay:0.3s">
-                    <p>"Competir con agencias mas grandes era un reto. Inmotext me da una ventaja real para alcanzar al mercado internacional que antes no tenia."</p>
-                    <p class="testimonial-author">Laura Gomez</p>
-                    <p class="testimonial-agency">Fundadora, Sol y Casa Inmobiliaria, Mallorca</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <h2 class="section-heading fade-in-up">Planes y precios</h2>
-            <div class="pricing-cards">
-                <div class="pricing-card fade-in-up">
-                    <h3>Starter</h3>
-                    <p class="price">€149<span>/mes</span></p>
-                    <ul>
-                        <li>Hasta 30 fichas/mes</li>
-                        <li>5 idiomas</li>
-                        <li>Soporte email</li>
-                    </ul>
-                    <a href="https://buy.stripe.com/14A00iadY5zH3xc1GJ2go01" class="button">Empezar ahora</a>
-                </div>
-                <div class="pricing-card highlight fade-in-up" style="transition-delay:0.15s">
-                    <span class="popular-badge">MAS POPULAR</span>
-                    <h3>Pro</h3>
-                    <p class="price">€199<span>/mes</span></p>
-                    <ul>
-                        <li>Hasta 100 fichas/mes</li>
-                        <li>5 idiomas</li>
-                        <li>Soporte prioritario</li>
-                        <li>Exportacion a Idealista</li>
-                    </ul>
-                    <a href="https://buy.stripe.com/dRm4gy71MbY50l0etv2go02" class="button">Empezar ahora</a>
-                </div>
-                <div class="pricing-card fade-in-up" style="transition-delay:0.3s">
-                    <h3>Agency</h3>
-                    <p class="price">€299<span>/mes</span></p>
-                    <ul>
-                        <li>Fichas ilimitadas</li>
-                        <li>5 idiomas</li>
-                        <li>Acceso API</li>
-                        <li>Gestor dedicado</li>
-                    </ul>
-                    <a href="https://buy.stripe.com/bJe7sK0Do4vD0l08572go03" class="button">Empezar ahora</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="section-heading fade-in-up">Preguntas frecuentes</h2>
-            <div class="faq-accordion fade-in-up">
-                <div class="faq-item">
-                    <div class="faq-question">Necesito conocimientos tecnicos? <span class="icon">+</span></div>
-                    <div class="faq-answer"><p>No, en absoluto. Inmotext esta disenado para ser intuitivo y facil de usar, sin necesidad de conocimientos tecnicos avanzados.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">En cuanto tiempo recibo las descripciones? <span class="icon">+</span></div>
-                    <div class="faq-answer"><p>Las descripciones se generan en aproximadamente 30 segundos, listas para usar inmediatamente.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Puedo cancelar cuando quiera? <span class="icon">+</span></div>
-                    <div class="faq-answer"><p>Si, todos nuestros planes son sin permanencia. Puedes cancelar en cualquier momento sin penalizaciones.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Los textos suenan naturales o roboticos? <span class="icon">+</span></div>
-                    <div class="faq-answer"><p>Completamente naturales. Nuestra IA ha sido entrenada con miles de fichas inmobiliarias reales para sonar como un profesional, no como una maquina.</p></div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Funciona para todo tipo de inmuebles? <span class="icon">+</span></div>
-                    <div class="faq-answer"><p>Si: pisos, villas, locales comerciales, terrenos, y mucho mas.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta">
-        <div class="container fade-in-up">
-            <h2>Empieza hoy. Primeros 14 dias gratis.</h2>
-            <a href="#pricing" class="button">Comenzar ahora</a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <a href="#" class="logo">Inmotext</a>
-            <p>Fichas inmobiliarias con IA</p>
-            <div class="footer-links">
-                <a href="#">Privacidad</a>
-                <a href="#">Terminos</a>
-                <a href="mailto:hola@inmotext.com">Contacto</a>
-            </div>
-            <p class="copyright">2026 Inmotext. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-        document.querySelectorAll('.faq-item').forEach(item => {
-            item.querySelector('.faq-question').addEventListener('click', () => {
-                document.querySelectorAll('.faq-item.active').forEach(open => {
-                    if (open !== item) {
-                        open.classList.remove('active');
-                        open.querySelector('.faq-answer').style.maxHeight = 0;
-                    }
-                });
-                item.classList.toggle('active');
-                const answer = item.querySelector('.faq-answer');
-                answer.style.maxHeight = item.classList.contains('active') ? answer.scrollHeight + 'px' : 0;
-            });
-        });
-        // Immediately show elements in viewport on load
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) { entry.target.classList.add('is-visible'); obs.unobserve(entry.target); }
-            });
-        }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
-        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-        // Fallback: ensure all elements show after 1.5s regardless
-        setTimeout(() => {
-            document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('is-visible'));
-        }, 1500);
-    </script>
+    <div class="logo">Inmotext</div>
+    <p>Algo grande esta llegando para agentes inmobiliarios en Espana.</p>
+    <div class="dot"></div>
 </body>
 </html>
